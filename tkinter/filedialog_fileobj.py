@@ -1,6 +1,7 @@
 '''tkinter filedialog sample
 
-    open filedialog to select file. returns file object
+    open filedialog to select file. returns file object.
+    just copy lines to your code.
 '''
 
 import os
