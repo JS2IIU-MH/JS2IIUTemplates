@@ -1,4 +1,4 @@
-name: env_test
+name: Env_test
 
 on: [push]
 
@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-python@v3
         with:
           python-version: ${{ matrix.python-version }}
-      -name: Run the code
+      - name: Run the code
         run: |
           python $(git ls-files '*.py')
           
