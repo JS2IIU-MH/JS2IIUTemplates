@@ -1,20 +1,25 @@
-name: Env_test
+name: Test on Ubuntu, Windows and MacOS
 
 on: [push]
 
 jobs:
-  build:
-    runs-on: [ubuntu-latest, windows-latest, macos-latest]
-    strategy:
-      matrix:
-        python-version: ["3.9", "3.10", "3.11"]
+  ubuntu_test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Run the code
-        run: |
-          python $(git ls-files '*.py')
-          
+      - run: |
+        python3 -m pip install --upgrade pip setuptools wheel
+        python3 $(git ls-files '*.py') pytest
+  macos_test:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+        python3 $(git ls-files '*.py') pytest
+  windows_test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+        python3 $(git ls-files '*.py') pytest
+
