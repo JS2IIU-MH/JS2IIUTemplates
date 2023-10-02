@@ -1,4 +1,4 @@
-name: env_test.yml
+name: env_test
 
 on: [push]
 
