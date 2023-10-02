@@ -7,12 +7,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - run: python $(git ls-files '*.py')
+      - run: |
+        sudo apt-get install python3-tk
+        python $(git ls-files '*.py')
   macos_test:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      - run: python $(git ls-files '*.py')
+      - run: |
+        brew install python-tk
+        python $(git ls-files '*.py')
   windows_test:
     runs-on: windows-latest
     steps:
