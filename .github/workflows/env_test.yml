@@ -8,7 +8,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: |
-        python3 -m pip install --upgrade pip setuptools wheel
         python3 $(git ls-files '*.py') pytest
   macos_test:
     runs-on: macos-latest
