@@ -8,6 +8,7 @@ Python templates for small programming projects.
 - GUI basic template
 - filedialog template (get filename, get file object, get directory path)
 - matplotlib on tkinter window
+- tree view sample (comming soon)
 
 ## serial templates
 

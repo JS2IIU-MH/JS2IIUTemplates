@@ -2,7 +2,7 @@
 
 import tkinter as tk
 # from tkinter import ttk
-from matplotlib.figure import Figure
+import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import numpy as np
 
@@ -38,7 +38,7 @@ class Application(tk.Frame):
     def gen_mpl_graph(self, master):
         ''' generate matplotlib graph on tk canvas '''
         # MatplotlibのFigureを作成
-        fig = Figure(figsize=(6, 4), dpi=100)
+        fig = plt.figure(figsize=(6, 4), dpi=100)
         ax = fig.add_subplot(111)
 
         # 三角関数のデータを生成

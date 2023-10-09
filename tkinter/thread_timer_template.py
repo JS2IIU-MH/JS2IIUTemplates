@@ -36,13 +36,10 @@ class Application(tk.Frame):
         self.label1 = tk.Label(frame1,
                                width=15, height=1,
                                text='Timer',
-                               # bg='white',
                                border=1,
                                font=('', 45, 'bold'),
                                justify=tk.CENTER,
                                padx=5, pady=5,
-                               # relief='ridge',
-                               # textvariable=some_StringVar
                                )
         self.label1.grid()
         frame1.grid()
@@ -50,45 +47,32 @@ class Application(tk.Frame):
         frame2 = tk.Frame(master)
         start_button = tk.Button(frame2,
                                  text='Start',
-                                 # foreground='black'
-                                 # background='white',
                                  font=('', 12, 'bold'),
-                                 # borderwidth=1,
                                  height=1,
                                  width=6,
                                  justify=tk.CENTER,
-                                 padx=5,
-                                 pady=5,
-                                 # textvariable=some_StringVar,
+                                 padx=5, pady=5,
                                  command=self.start_button_click
                                  )
         start_button.grid(row=0, column=0)
 
         stop_button = tk.Button(frame2,
                                 text='Stop',
-                                # foreground='black'
-                                # background='white',
                                 font=('', 12, 'bold'),
-                                # borderwidth=1,
                                 height=1,
                                 width=6,
                                 justify=tk.CENTER,
                                 padx=5, pady=5,
-                                # textvariable=some_StringVar,
                                 command=self.stop_button_click
                                 )
         stop_button.grid(row=0, column=1)
 
         reset_button = tk.Button(frame2,
                                  text='Reset',
-                                 # foreground='black',
-                                 # background='white',
                                  font=('', 12, 'bold'),
-                                 # borderwidth=1,
                                  height=1, width=6,
                                  justify=tk.CENTER,
                                  padx=5, pady=5,
-                                 # textvariable=some_StringVar,
                                  command=self.reset_button_click
                                  )
         reset_button.grid(row=0, column=2)
@@ -97,16 +81,11 @@ class Application(tk.Frame):
         frame3 = tk.Frame(master)
         extbtn = tk.Button(frame3,
                            text='Exit',
-                           # foreground='black'
-                           # background='white',
                            font=('', 12, 'bold'),
-                           # borderwidth=1,
                            height=1,
                            width=6,
                            justify=tk.CENTER,
-                           padx=5,
-                           pady=5,
-                           # textvariable=some_StringVar,
+                           padx=5, pady=5,
                            command=self.quit_app
                            )
         extbtn.grid()
