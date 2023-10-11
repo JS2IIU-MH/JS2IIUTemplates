@@ -6,12 +6,16 @@ Python templates for small programming projects.
 
 ## tkinter templates
 
-- GUI basic template
-- filedialog template (get filename, get file object, get directory path)
-- matplotlib on tkinter window
-- tree view sample (comming soon)
+- [GUI basic Template](tkinter/gui_template_basic.py)
+- Filedialog Templates
+    - [get filename full path](tkinter/filedialog_fullpath.py)
+    - [get file object](tkinter/filedialog_fileobj.py)
+    - [get directory path](tkinter/filedialog_folderpath.py)
+- [Matplotlib graph on tkinter window template](tkinter/tkinter_matplotlib_template.py)
+- [tkinter and thread template](tkinter/thread_timer_template.py) (Timer example)
+- Tree view Template (comming soon)
 
 ## serial templates
 
-- comming soon
+- [Basic Serial Communication Template](serial/serial_basic_template.py)
 
