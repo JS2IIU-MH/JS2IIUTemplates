@@ -26,16 +26,17 @@ class Application(tk.Frame):
 
         frame1 = tk.Frame(master)
         label1 = tk.Label(frame1,
-                          text='File: ',
+                          text='File:',
                           )
         label1.grid(row=0, column=0)
-        label2 = tk.Label(frame1,
-                          width=25,
-                          text='',
-                          justify=tk.CENTER,
-                          border=1,
-                          )
-        label2.grid(row=0, column=1)
+        self.label2 = tk.Label(frame1,
+                               width=20,
+                               text='',
+                               justify=tk.CENTER,
+                               border=1,
+                               font=('Courier New', 14)
+                               )
+        self.label2.grid(row=0, column=1)
         frame1.grid()
 
         frame2 = tk.Frame(master)
@@ -53,6 +54,7 @@ class Application(tk.Frame):
     def treeview_from_csv(self, master):
         ''' treeview_from_csv '''
         sample_csv = 'treeview_data.csv'
+        self.label2['text'] = sample_csv
         path, _ = os.path.split(__file__)
         sample_file_path = os.path.join(path, sample_csv)
 
@@ -64,7 +66,11 @@ class Application(tk.Frame):
         self.tree = ttk.Treeview(master,
                                  columns=column_list,
                                  selectmode=tk.EXTENDED,
-                                 height=5)
+                                 height=7)
+        # style
+        style = ttk.Style()
+        style.configure('Treeview.Heading', font=('Calibri', 12))
+        style.configure('Treeview', font=('Courier New', 12))
 
         # column setting, heading
         self.tree.column('#0', width=0, stretch=tk.NO)
@@ -76,13 +82,16 @@ class Application(tk.Frame):
                 self.tree.column(_c, width=80, anchor=tk.CENTER)
             self.tree.heading(_c, text=_c, anchor=tk.CENTER)
 
-        # recoed
+        # record
         for i in range(len(_df)):
             values = _df.iloc[i].to_list()
             # print(values)
-            self.tree.insert(parent='', index=tk.END, iid=i, values=values)
+            self.tree.insert(parent='', tags=i, index=tk.END, iid=i, values=values)
+            # background color each 2 lines
+            if i % 2 == 0:
+                self.tree.tag_configure(i, background='#e6e6fa')
 
-        # scrollbar
+        # scrollbar - vertical
         scrollbar = ttk.Scrollbar(master, orient=tk.VERTICAL,
                                   command=self.tree.yview)
         self.tree.configure(yscrollcommand=scrollbar.set)
@@ -96,7 +105,7 @@ def main():
 
     root = tk.Tk()
 
-    root.geometry('700x200')
+    root.geometry('700x300')
     root.title('Treeview Sample')
     root.grid_anchor(tk.CENTER)
 
