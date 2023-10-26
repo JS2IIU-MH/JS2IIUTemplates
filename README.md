@@ -19,8 +19,14 @@ Python templates for small programming projects.
 
 - [Basic Serial Communication Template](serial/serial_basic_template.py)
 
+## MISC
+
+- [Clipboard copy/paste](misc/clipboard_template.py) : clipboard utility using pyperclip. only for string.
+
 ## Reference
 ### ttk.Treeview widget
 - [25.2. tkinter.ttk --- Tk のテーマ付きウィジェット — Python 3.6.15 ドキュメント](https://docs.python.org/ja/3.6/library/tkinter.ttk.html#treeview)
 - [【Python】tkinter：テーブル（表）の作成方法（ttk.Treeview） | OFFICE54](https://office54.net/python/tkinter/ttk-treeview-table)
 - [Tkinter Scrollbar と Listbox - Tkinter による GUI プログラミング - Python 入門](https://python.keicode.com/advanced/tkinter-widget-scrollbar.php)
+### pyperclip
+- [pyperclip · PyPI](https://pypi.org/project/pyperclip/)
