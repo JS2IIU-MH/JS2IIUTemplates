@@ -22,6 +22,7 @@ Python templates for small programming projects.
 ## MISC
 
 - [Clipboard copy/paste](misc/clipboard_template.py) : clipboard utility using pyperclip. only for string.
+- [time from NTP server](misc/ntp_template.py) : receive date and time from NTP server. use ntplib.
 
 ## Reference
 ### ttk.Treeview widget
