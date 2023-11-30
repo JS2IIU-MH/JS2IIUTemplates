@@ -1,3 +1,7 @@
+name: UpdateBadge
+
+on: [push]
+
 jobs:
   badge_job:
     runs-on: ubuntu-latest
