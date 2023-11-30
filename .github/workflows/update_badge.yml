@@ -3,6 +3,10 @@ name: UpdateBadge
 on: [push]
 
 jobs:
+  permissions:
+    actions: write
+    checks: write
+    contents: write
   badge_job:
     runs-on: ubuntu-latest
     steps:
