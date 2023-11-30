@@ -7,7 +7,7 @@ Python templates for small programming projects.
 -->
 
 ![](https://byob.yarr.is/JS2IIU-MH/JS2IIUTemplates/passing_lints)
-![](https://byob.yarr.is/JS2IIU-MH/JS2IIUTemplates/time)
+![](https://byob.yarr.is/JS2IIU-MH/JS2IIUTemplates/time1)
 [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
 ## tkinter templates
