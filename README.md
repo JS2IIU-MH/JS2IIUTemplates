@@ -26,6 +26,14 @@ Python templates for small programming projects.
 - [Basic Serial Communication Template](serial/serial_basic_template.py)
 - List COM port
 
+## Qt
+- Install Qt5 
+    ```sh
+    pip install SIP
+    pip install PyQt5
+    ```
+- [qt_basic.py](Qt/qt_basic.py) : Qt window with a label and a button.
+
 ## MISC
 
 - [Clipboard copy/paste](misc/clipboard_template.py) : clipboard utility using pyperclip. only for string.
