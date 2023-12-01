@@ -54,7 +54,7 @@ jobs:
           NAME: time
           LABEL: 'Updated at'
           STATUS: ${{ steps.date.outputs.date }}
-          COLOR: 00EEFF
+          COLOR: 4B0082
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
       - name: Flake8 lint badge status update
         uses: RubbaBoy/BYOB@v1.3.0
