@@ -52,10 +52,10 @@ jobs:
       - name: Time badge
         uses: RubbaBoy/BYOB@v1.3.0
         with:
-          NAME: time
+          NAME: time1
           LABEL: 'Updated at'
           STATUS: ${{ steps.date.outputs.date }}
-          COLOR: 4B0082
+          COLOR: ${{ needs.SetGlobalConstants.outputs.DATE_BADGE_COLOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
       - name: Flake8 lint badge status update
         uses: RubbaBoy/BYOB@v1.3.0
@@ -112,21 +112,4 @@ jobs:
           COLOR: ${{ needs.SetGlobalConstants.outputs.PASSING_BADGE_COLOR }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  UpdateDateBadgeUpdate:
-    needs: [
-      RunFlake8, CreateCache, SetGlobalConstants
-    ]
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    steps:
-      - id: date
-        run: echo "##[set-output name=data;]$(date)"
-      - name: Time badge
-        uses: RubbaBoy/BYOB@v1.3.0
-        with:
-          NAME: time1
-          LABEL: 'Updated at'
-          STATUS: ${{ steps.date.outputs.data }}
-          COLOR: ${{ needs.SetGlobalConstants.outputs.DATE_BADGE_COLOR }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     

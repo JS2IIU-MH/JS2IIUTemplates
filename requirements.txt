@@ -20,9 +20,9 @@ pyflakes==3.1.0
 pylint==2.17.7
 pyparsing==3.1.1
 pyperclip==1.8.2
-PyQt5==5.15.10
-PyQt5-Qt5==5.15.11
-PyQt5-sip==12.13.0
+PyQt5
+PyQt5-Qt
+PyQt5-sip
 pyserial==3.5
 python-dateutil==2.8.2
 sip==6.8.0

@@ -1,3 +1,13 @@
+# pylint
+.pylintrc
+setup.cfg
+
+# test files
+test*.py
+
+# downloaded whl
+*.whl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
