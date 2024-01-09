@@ -34,6 +34,9 @@ Python templates for small programming projects.
     ```
 - [qt_basic.py](Qt/qt_basic.py) : Qt window with a label and a button.
 
+## Matplotlib
+- ヒストグラムと累積確率を一緒にプロットする: [histgram.py](matplotlib/histgram.py)
+
 ## MISC
 
 - [Clipboard copy/paste](misc/clipboard_template.py) : clipboard utility using pyperclip. only for string.
@@ -55,3 +58,6 @@ Python templates for small programming projects.
 ### Homebrew
 - [Homebrew — The Missing Package Manager for macOS (or Linux)](https://brew.sh/)
 
+### Qt
+- [Qt for Python](https://doc.qt.io/qtforpython-6/)
+- [Quick start - Qt for Python](https://doc.qt.io/qtforpython-6/quickstart.html#quick-start)
